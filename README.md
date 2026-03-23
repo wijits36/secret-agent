@@ -31,4 +31,4 @@ uv run main.py "your prompt here"
 uv run main.py -v "your prompt here"  # verbose mode
 ```
 
-The agent runs in a loop (up to 20 iterations) until it produces a final response or exhausts its steps.
+The agent runs in a loop (up to 20 iterations by default) until it produces a final response or exhausts its steps.
