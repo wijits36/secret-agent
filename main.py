@@ -6,7 +6,7 @@ from google import genai
 from google.genai import types
 
 from call_function import available_functions, call_function
-from config import MODEL_NAME
+from config import MAX_LOOPS, MODEL_NAME
 from prompts import system_prompt
 
 
@@ -30,7 +30,7 @@ def main():
     if args.verbose:
         print(f"User prompt: {args.user_prompt}")
 
-    for _ in range(20):
+    for _ in range(MAX_LOOPS):
         final_response = generate_content(client, messages, args)
         if final_response:
             print(final_response)
